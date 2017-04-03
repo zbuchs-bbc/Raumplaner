@@ -25,17 +25,24 @@ import java.util.ArrayList;
 public class Regal {
 	/* TODO Attribute für Datenbankzugriffe deklarieren */
 
-	private ArrayList<DataTable> dataTable;
+	private ArrayList<DataTable> dataTableList;
+	
+	
+	
+	
+	private void addData(){
+		DataTable row1 = new DataTable("Schmids Zimmer", "es isch grusig", 10, 1, 20);
+		
+		dataTableList.add(row1);
+	}
 
 	/**
 	 * Konstruktor
 	 */
 	public Regal() {
 
-		setDataTable(new ArrayList<DataTable>());
-		
         /* TODO Verbindung zur Datenkbank öffnen */
-		
+		addData();
 		
 
 	}
@@ -47,14 +54,14 @@ public class Regal {
 	 * @param buch
 	 */
 	public void add(DataTable aktuell) {
-		dataTable.add(aktuell);
+		dataTableList.add(aktuell);
 	}
 
 	/**
 	 * Buch aus der ArrayList löschen
 	 */
 	public void delete(DataTable aktuell) {
-		dataTable.remove(aktuell);
+		dataTableList.remove(aktuell);
 	}
 
 	/**
@@ -64,23 +71,17 @@ public class Regal {
 	 */
 	public DataTable getBuchById(int id) {
 		DataTable gesucht;
-		gesucht = dataTable.get(id);
+		gesucht = dataTableList.get(id);
 		return gesucht;
 	}
 
-	/**
-	 * @return the buecher
-	 */
-	public ArrayList<DataTable> getDataTable() {
-		return dataTable;
+	public ArrayList<DataTable> getDataTableList() {
+		return dataTableList;
 	}
 
-	/**
-	 * @param buecher
-	 *            the buecher to set
-	 */
-	public void setDataTable(ArrayList<DataTable> dataTable) {
-		this.dataTable = dataTable;
+	public void setDataTableList(ArrayList<DataTable> dataTableList) {
+		this.dataTableList = dataTableList;
 	}
+
 
 }

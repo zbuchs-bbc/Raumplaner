@@ -31,7 +31,7 @@ public class AddBean {
 	 */
 	public AddBean() {
 		setRegalBean( new TableBean() );
-		setAktuell(new Buch());
+		setAktuell(new DataTable());
 	}
 
 	/**

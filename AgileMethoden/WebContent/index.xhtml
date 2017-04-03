@@ -18,8 +18,9 @@
  -->
  
  
- <h:dataTable value="">
+ <h:dataTable value="#{tableBean.regal.dataTableList}" border="1" var="data">
  
+ 	<h:column value="#{data.beschreibung}"/>
  
  
  </h:dataTable>

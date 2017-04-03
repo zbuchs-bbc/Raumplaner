@@ -16,6 +16,10 @@ public DataTable(String raum, String beschreibung, int groesse, int luxusScala, 
 	this.preis = preis;
 }
 	
+	public DataTable() {
+	// TODO Auto-generated constructor stub
+}
+
 	public String getRaum() {
 		return raum;
 	}

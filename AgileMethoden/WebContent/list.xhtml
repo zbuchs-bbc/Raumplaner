@@ -22,45 +22,45 @@
   </ui:define>
   <ui:define name="content">
 
-    <h:dataTable value="#{regalBean.regal.dataTable}" border="1" var="DataTable">
+    <h:dataTable value="#{tableBean.regal.dataTableList}" border="1" var="data">
       <h:column>
         <f:facet name="header">
 	      Index
 	    </f:facet>
-	    #{regalBean.regal.dataTable.indexOf(DataTable)}
+	    <h:outputText value="#{regalBean.regal.data.indexOf(DataTable)}" />
 	  </h:column>
       <h:column>
         <f:facet name="header">
 	      Raum
 	    </f:facet>
-	    #{DataTable.raum}
+	    <h:outputText value="#{data.raum}"/>
 	  </h:column>
       <h:column>
         <f:facet name="header">
 	      Beschreibung
 	    </f:facet>
-	    #{DataTable.beschreibung}
+	    <h:outputText value="#{data.beschreibung}"/>
 	  </h:column>
       <h:column>
         <f:facet name="header">
 	      Groesse
 	    </f:facet>
-        #{DataTable.groesse}
+        <h:outputText value="#{data.groesse}"/>
       </h:column>
       <h:column>
         <f:facet name="header">
 	      Luxus-Scala
 	    </f:facet>
-	    #{DataTable.luxusScala}
+	    <h:outputText value="#{data.luxusScala}"/>
 	  </h:column>
       <h:column>
         <h:link value="Edit ..." outcome="edit">
-          <f:param name="buchId" value="#{regalBean.regal.dataTable.indexOf(DataTable)}" />
+          <f:param name="buchId" value="#{regalBean.regal.data.indexOf(DataTable)}" />
         </h:link>
       </h:column>
       <h:column>
         <h:link value="Delete ..." outcome="delete">
-          <f:param name="buchId" value="#{regalBean.regal.dataTable.indexOf(DataTable)}" />
+          <f:param name="buchId" value="#{regalBean.regal.data.indexOf(DataTable)}" />
         </h:link>
       </h:column>
     </h:dataTable>
